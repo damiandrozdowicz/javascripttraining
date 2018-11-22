@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Settlers of Catan</title>
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/catan.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <section id="introduction" class="section hidden">
+      <img class="logo" src="assets/logo.png" alt="">
+      <p class="lead">
+        Picture yourself in the era of discoveries: after a long voyage of great deprivation, your ships have finally
+        reached the coast of an uncharted island. Its name shall be Catan! But you are not the only discoverer. Other
+        fearless seafarers have also landed on the shores of Catan: the race to settle the island has begun!
+      </p>
+
+      <a class="btn btn-success" href="#setup">Let's Play!</a>
+
+    </section>
+    <section id="setup" class="section">
+ 
+        <div class="form-group row">
+          <label for="staticEmail" class="col-sm-5 col-form-label">Player name</label>
+          <input type="text" class="col-sm-7" id="playerName" value="" />
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword" class="col-sm-5 col-form-label">Colour</label>
+
+          <select id="colour" class="col-sm-7">
+            <option value="red">Red</option>
+            <option value="black">Black</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="brown">Brown</option>
+          </select>
+
+        </div>
+        <button class="btn btn-info" id="addPlayer">Add +</button>
+     
+      <br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Colour</th>
+            <th scope="col">Name</th>
+            <th scope="col">&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody id="table">
+          <tr>
+            <th scope="row">1</th>
+            <td>Red</td>
+            <td>Otto</td>
+            <td><a href="#" class="removeItem">X</a></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Blue</td>
+            <td>Thornton</td>
+            <td><a href="#" class="removeItem">X</a></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Black</td>
+            <td>the Bird</td>
+            <td><a href="#" class="removeItem">X</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <br/>
+      <a class="btn btn-success" href="#setup">Start Game</a>
+    </section>
+    <section id="game" class="hidden"></section>
+  </div>
+
+</body>
+<!-- <script src="js/main.js"></script> -->
+<script src="js/andrea.js"></script>
+
+</html>

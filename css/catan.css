@@ -1,0 +1,46 @@
+body {
+  background-image: url(../assets/catanback.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html {
+  height: 100%;
+}
+
+.section {
+  width: 400px;
+  margin: 5em auto 0 auto;
+  background: #a12724;
+  padding: 2em;
+  color: white;
+  text-align: center;
+}
+
+.brand-color {
+  color: #a12724;
+}
+
+body {
+  font: normal 18px/1.25 minion-pro,"times new roman",serif
+}
+
+#introduction {
+  
+}
+
+.logo {
+  margin-bottom: 1em
+}
+
+.hidden {
+  display: none;
+}
+
+#setup {
+  text-align: left
+}
+
+hr {
+  border:solid white 1px
+}
