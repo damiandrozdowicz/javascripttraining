@@ -1,3 +1,6 @@
+@import url('../assets/fonts/open-sans/OpenSans.css');
+@import url('../assets/fonts/material-icons/material-icons.css');
+
 body {
   background-image: url(../assets/catanback.jpg);
   background-repeat: no-repeat;
@@ -10,11 +13,14 @@ html {
 
 .section {
   width: 400px;
-  margin: 5em auto 0 auto;
+  margin: 4em auto 0 auto;
   background: #a12724;
   padding: 2em;
   color: white;
   text-align: center;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
 }
 
 .brand-color {
@@ -22,12 +28,12 @@ html {
 }
 
 body {
-  font: normal 18px/1.25 minion-pro,"times new roman",serif
+  font: normal 16px/1.25 'Open Sans', sans-serif, "times new roman", serif;
 }
 
-#introduction {
+/*#introduction {
   
-}
+}*/
 
 .logo {
   margin-bottom: 1em
@@ -42,5 +48,99 @@ body {
 }
 
 hr {
-  border:solid white 1px
+  border: solid white 1px
+}
+
+form#form-add-player {
+  margin-bottom: 1rem;
+}
+
+form#form-add-player button[type="submit"] {
+  display: block;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 0 auto;
+}
+
+form input,
+form select {
+  outline: none;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+div.button-group {
+  overflow: hidden;
+}
+
+.btn.btn-float-left {
+  float: left;
+  margin-right: 0.5em;
+}
+
+.btn.btn-float-right {
+  float: right;
+  margin-left: 0.5em;
+}
+
+.btn.icon-left,
+.btn.icon-right {
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.removePlayer {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.btn.icon-left i {
+  margin-left: -0.25em;
+}
+
+.btn.icon-right i {
+  margin-right: -0.25em;
+}
+
+table.players {
+  counter-reset: playerIndex;
+}
+
+table.players thead th:nth-child(1),
+table.players thead th:nth-child(4) {
+  width: 48px;
+  text-align: center;
+}
+
+table.players tbody td:nth-child(1) {
+  text-align: center;
+}
+
+table.players tbody td:nth-child(1)::before {
+  counter-increment: playerIndex;
+  content: counter(playerIndex);
+}
+
+table.players tbody td:nth-child(4) {
+  text-align: right;
+}
+
+span.colorCircle {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 0.25rem;
+  border: 1px solid #CCCCCC;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
 }

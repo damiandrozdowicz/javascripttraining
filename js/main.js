@@ -52,7 +52,7 @@ let player = {
   constructions: {
     cities: 0,
     settlements: 0,
-    roads:0
+    roads: 0
   },
   specialCards: {
     longestRoadCard: false,
@@ -65,13 +65,13 @@ let player = {
     clay: 10,
     ore: 10
   },
-  buildStructure: function() { console.log('to do...')},
-  trade: function() { console.log('to do...')},
-  acceptDeal: function() { console.log('to do...')},
-  createOffer: function() { console.log('to do...')},
-  useDevelopmentCard: function() { console.log('to do...')},
-  rollDices: function() { console.log('to do...')},
-  finishRound: function() { console.log('to do...')}
+  buildStructure: function () { console.log('to do...') },
+  trade: function () { console.log('to do...') },
+  acceptDeal: function () { console.log('to do...') },
+  createOffer: function () { console.log('to do...') },
+  useDevelopmentCard: function () { console.log('to do...') },
+  rollDices: function () { console.log('to do...') },
+  finishRound: function () { console.log('to do...') }
 }
 
 let testResources = {
@@ -171,9 +171,9 @@ const board = {
       isActive: false
     }
   ],
-  createBoard: function() { console.log('to do...')},
-  distributeGoods: function() { console.log('to do...')},
-  nextPlayer: function() { console.log('to do...')}
+  createBoard: function () { console.log('to do...') },
+  distributeGoods: function () { console.log('to do...') },
+  nextPlayer: function () { console.log('to do...') }
 }
 
 const game = {
@@ -181,7 +181,7 @@ const game = {
 }
 
 
-function addPlayer () {
+function addPlayer() {
   let elTable = document.getElementById('table');
 
   elTable.innerHTML = `
@@ -199,4 +199,4 @@ function addPlayer () {
   </tr>`;
 }
 
-addPlayer ()
+addPlayer()
