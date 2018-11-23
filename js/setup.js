@@ -1,12 +1,32 @@
 const sections = ['introduction', 'setup', 'game'];
-const colors = [
-    { value: 'red', label: 'Red' },
-    { value: 'green', label: 'Green' },
-    { value: 'blue', label: 'Blue' },
-    { value: 'yellow', label: 'Yellow' },
-    { value: 'orange', label: 'Orange' },
-    { value: 'purple', label: 'Purple' },
-    { value: '#123456', label: 'SpecialBlue' }
+const colors = [{
+        value: 'red',
+        label: 'Red'
+    },
+    {
+        value: 'green',
+        label: 'Green'
+    },
+    {
+        value: 'blue',
+        label: 'Blue'
+    },
+    {
+        value: 'yellow',
+        label: 'Yellow'
+    },
+    {
+        value: 'orange',
+        label: 'Orange'
+    },
+    {
+        value: 'purple',
+        label: 'Purple'
+    },
+    {
+        value: '#123456',
+        label: 'SpecialBlue'
+    }
 ];
 const players = [];
 
@@ -115,9 +135,12 @@ function showHideVisibleColorOptions() {
 
     for (let i = 0; i < options.length; i++) {
         const option = options[i];
-        option.style.display = isColorUsed(getColorByValue(option.value)) ? 'none' : '';
+        const _isColorUsed = isColorUsed(getColorByValue(option.value))
 
-        if (!isColorUsed(getColorByValue(option.value))) {
+        option.style.display = _isColorUsed ? 'none' : '';
+        option.disabled = _isColorUsed
+
+        if (!_isColorUsed) {
             firstVisibleOption = Math.min(firstVisibleOption, i);
         }
     }
