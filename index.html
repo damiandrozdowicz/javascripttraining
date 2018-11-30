@@ -1,89 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>The Settlers of Catan</title>
-  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/catan.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Settlers of Catan</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/catan.css">
+  </head>
 
-<body>
-  <div class="wrapper">
-    <section id="introduction" class="section hidden">
-      <img class="logo" src="assets/logo.png" alt="">
-      <p class="lead">
-        Picture yourself in the era of discoveries: after a long voyage of great deprivation, your ships have finally
-        reached the coast of an uncharted island. Its name shall be Catan! But you are not the only discoverer. Other
-        fearless seafarers have also landed on the shores of Catan: the race to settle the island has begun!
-      </p>
+  <body>
+    <div class="wrapper">
+      <section id="introduction" class="section">
+        <img class="logo" src="assets/logo.png" alt="">
+        <p class="lead">
+          Picture yourself in the era of discoveries: after a long voyage of great deprivation, your ships have finally
+          reached the coast of an uncharted island. Its name shall be Catan! But you are not the only discoverer. Other
+          fearless seafarers have also landed on the shores of Catan: the race to settle the island has begun!
+        </p>
 
-      <a class="btn btn-success" href="#setup">Let's Play!</a>
+        <button class="btn btn-success" onclick="goToSection('setup');">Let's Play!</button>
+      </section>
 
-    </section>
-    <section id="setup" class="section">
- 
-        <div class="form-group row">
-          <label for="staticEmail" class="col-sm-5 col-form-label">Player name</label>
-          <input type="text" class="col-sm-7" id="playerName" value="" />
+      <section id="setup" class="section hidden">
+        <form id="form-add-player" onsubmit="addPlayer(event);">
+          <div class="form-group row">
+            <label for="name" class="col-sm-5 col-form-label">Player name</label>
+            <input id="name" class="form-control col-sm-7" type="text" value="" />
+          </div>
+          <div class="form-group row">
+            <label for="color" class="col-sm-5 col-form-label">Color</label>
+            <select id="color" class="custom-select col-sm-7"></select>
+          </div>
+          <button type="submit" class="btn btn-info" id="player-add">Add</button>
+        </form>
+
+        <table class="table players">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Color</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody id="players"></tbody>
+        </table>
+        <div class="button-group">
+          <button class="btn btn-primary btn-float-left icon-left" onclick="goToSection('introduction');"><i class="material-icons">chevron_left</i> Back</button>
+          <button id="start-game" class="btn btn-success btn-float-right icon-right" onclick="goToSection('game');" disabled>Start Game <i class="material-icons">chevron_right</i></button>
         </div>
-        <div class="form-group row">
-          <label for="inputPassword" class="col-sm-5 col-form-label">Colour</label>
+      </section>
 
-          <select id="colour" class="col-sm-7">
-            <option value="red">Red</option>
-            <option value="black">Black</option>
-            <option value="blue">Blue</option>
-            <option value="yellow">Yellow</option>
-            <option value="green">Green</option>
-            <option value="brown">Brown</option>
-          </select>
+      <section id="game" class="hidden"></section>
+    </div>
 
-        </div>
-        <button class="btn btn-info" id="addPlayer">Add +</button>
-     
-      <br>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Colour</th>
-            <th scope="col">Name</th>
-            <th scope="col">&nbsp;</th>
-          </tr>
-        </thead>
-        <tbody id="table">
-          <tr>
-            <th scope="row">1</th>
-            <td>Red</td>
-            <td>Otto</td>
-            <td><a href="#" class="removeItem">X</a></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Blue</td>
-            <td>Thornton</td>
-            <td><a href="#" class="removeItem">X</a></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Black</td>
-            <td>the Bird</td>
-            <td><a href="#" class="removeItem">X</a></td>
-          </tr>
-        </tbody>
-      </table>
-      <br/>
-      <a class="btn btn-success" href="#setup">Start Game</a>
-    </section>
-    <section id="game" class="hidden"></section>
-  </div>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/class.Player.js"></script>
+    <script src="js/setup.js"></script>
+    <script src="js/andrea.js"></script>
 
-</body>
-<!-- <script src="js/main.js"></script> -->
-<script src="js/andrea.js"></script>
+  </body>
 
 </html>

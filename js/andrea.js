@@ -52,7 +52,7 @@ let NewResources = {
 
 function addResources(player, resources){    
   player.resources.wood = player.resources.wood + resources.wood;          
-  console.log(player.resources.wood,player.resources.wood , resources.wood)
+  //console.log(player.resources.wood,player.resources.wood , resources.wood)
   player.resources.sheep = player.resources.sheep + resources.sheep;
   player.resources.grain = player.resources.grain + resources.grain;
   player.resources.clay = player.resources.clay + resources.clay;
@@ -67,10 +67,10 @@ function addResources(player, resources){
 
 
 addResources(myPlayer, NewResources);        // definicia, ze addresources vrati hodnoty myPlayer
-console.log(1,myPlayer)     
+//console.log(1,myPlayer)     
 addResources(myPlayer, NewResources);
-console.log(2,myPlayer)     
+//console.log(2,myPlayer)     
 addResources(myPlayer, NewResources);
-console.log(3,myPlayer)     
+//console.log(3,myPlayer)     
 addResources(myPlayer, NewResources);
-console.log(4,myPlayer)     
+//console.log(4,myPlayer)     
