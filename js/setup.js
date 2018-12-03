@@ -109,7 +109,7 @@ function addPlayerRowToTable(player) {
  * @param {number} playerID ID of player do remove
  */
 function removePlayer(e, playerID) {
-    e.target.parentElement.parentElement.remove();
+    e.target.closest('tr').remove();
     const playerIndex = getPlayerIndexByID(playerID);
     players.splice(playerIndex, 1);
 
